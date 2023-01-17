@@ -1,5 +1,9 @@
 This repo holds code that represents a visualization of the [Effective Altruism Funds](https://funds.effectivealtruism.org/) [Grants Database](https://funds.effectivealtruism.org/grants).
 
+# Status
+
+This project is under active development.
+
 # Development
 
 ## Getting Started
