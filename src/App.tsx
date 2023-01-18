@@ -1,7 +1,7 @@
 import { uniqBy } from 'lodash'
 import { useEffect, useState } from 'react'
 import './App.css'
-import BarGraph from './components/BarGraph';
+import VerySimpleBarGraph from './components/VerySimpleBarGraph';
 
 function App() {
     const [grantsList, setGrantsList] = useState([]);
@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <h2>EA Funds: Graphs</h2>
-      <BarGraph grantsList={grantsList} />
+      <VerySimpleBarGraph grantsList={grantsList} />
     </div>
   )
 }

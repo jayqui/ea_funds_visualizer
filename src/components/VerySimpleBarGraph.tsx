@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-function BarGraph({ grantsList }) {
+function VerySimpleBarGraph({ grantsList }) {
   const [currentWindowHeight, setCurrentWindowHeight] = useState(window.innerHeight);
   const [currentWindowWidth, setCurrentWindowWidth] = useState(window.innerWidth);
 
@@ -33,7 +33,7 @@ function BarGraph({ grantsList }) {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="round" />
           <YAxis />
-          <Tooltip />
+          <Tooltip formatter={(value) => `$${new Intl.NumberFormat('en').format(value)}`} />
           <Legend />
           <Bar dataKey="amount" fill="#8884d8" />
         </BarChart>
@@ -42,4 +42,4 @@ function BarGraph({ grantsList }) {
   );
 }
 
-export default BarGraph
+export default VerySimpleBarGraph
